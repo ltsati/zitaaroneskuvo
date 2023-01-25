@@ -730,7 +730,8 @@
         console.log(form);
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
-            alert("Siker!", response);
+            document.getElementById("form").innerHTML =
+              "<h2 class='a1X a3q sm:a2_ a1j dark:a1k a28'>Válasz sikeresen elküldve!</h2>";
           })
           .catch((error) => alert("Valami hiba történt.", error.message));
       });
